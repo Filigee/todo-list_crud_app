@@ -24,22 +24,30 @@
         <ul class="todoItems">
         <div class="divider margin"></div>
         <% for(let i=0; i < items.length; i++) {%>
-            <li class="item margin hoverable" style="padding: 10px; width: max-content;">
-                <% if(items[i].completed === true) {%>
-                    <span class='completed'><%= items[i].thing %></span>
-                <% }else{ %>
-                    <span><%= items[i].thing %></span>
-                <% } %>    
-                <button class="red delete waves-effect waves-light btn" style="margin-left: 20px;">
-                    <span class='fa fa-trash' style="color: black;"></span>
-                </button>
-            </li>
+            <div style="display: flex; justify-content: space-between;">
+                <li class="item margin hoverable" style="padding: 10px; width: 50%;">
+                    <% if(items[i].completed === true) {%>
+                        <span class='completed'><%= items[i].thing %></span>
+                    <% }else{ %>
+                        <span style="word-wrap: break-word;"><%= items[i].thing %></span>
+                    <% } %>
+                </li>
+                <div>
+                    <button id="high" class="importance-btn | btn grey orange" style="margin-left: 10px;">High</button>    
+                    <button id="med" class="importance-btn | btn grey orange" style="margin-left: 10px;">Med</button>    
+                    <button id="low" class="importance-btn | btn orange" style="margin-left: 10px;">Low</button> 
+                    <button class="red delete waves-effect waves-light btn " style="margin-left: 20px;">
+                        <span class='fa fa-trash' style="color: black;"></span>
+                    </button>
+                </div>   
+            </div>
+            
         <% } %>
         </ul>
 
 
 
-        <form action="/addTodo" method="POST" style="margin-top: 300px;">
+        <form action="/addTodo" method="POST" style="padding-top: 100px;">
             <input type="text" placeholder="Thing To Do" name="todoItem">
             <button class="btn" type="submit">Add To-Do<i class="fas fa-solid fa-square-arrow-up-right right"></i></button>
         </form>

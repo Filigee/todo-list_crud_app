@@ -40,7 +40,7 @@ app.get('/',async (request, response)=>{
 })
 
 app.post('/addTodo', (request, response) => {
-    db.collection('todos').insertOne({thing: request.body.todoItem, completed: false})
+    db.collection('todos').insertOne({thing: request.body.todoItem, completed: false, importance: "High"})
     .then(result => {
         console.log('Todo Added')
         response.redirect('/')
@@ -80,6 +80,19 @@ app.put('/markUnComplete', (request, response) => {
     })
     .catch(error => console.error(error))
 
+})
+
+app.put('/changeImportance', (request, response) => {
+    db.collection('todos').updateOne({thing: request.body.itemFromJS},{
+        $set: {
+            importance: request.body.importance
+        }
+    })
+    .then(result => {
+        console.log('Importance Changed')
+        response.json(request.body.itemFromJS)
+    })
+    .catch(error => console.error(error))
 })
 
 app.delete('/deleteItem', (request, response) => {
