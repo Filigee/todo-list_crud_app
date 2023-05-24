@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-do List: </h1>
+        <ul class="todoItems">
+        <div class="divider margin"></div>
+        <% for(let i=0; i < items.length; i++) {%>
+            <li class="item margin hoverable" style="padding: 10px; width: max-content;">
+                <% if(items[i].completed === true) {%>
+                    <span class='completed'><%= items[i].thing %></span>
+                <% }else{ %>
+                    <span><%= items[i].thing %></span>
+                <% } %>    
+                <button class="red delete waves-effect waves-light btn" style="margin-left: 20px;">
+                    <span class='fa fa-trash' style="color: black;"></span>
+                </button>
+            </li>
+        <% } %>
+        </ul>
+
+
+
+        <form action="/addTodo" method="POST" style="margin-top: 300px;">
+            <input type="text" placeholder="Thing To Do" name="todoItem">
+            <button class="btn" type="submit">Add To-Do<i class="fas fa-solid fa-square-arrow-up-right right"></i></button>
+        </form>
+
+        <h4 style="float: right;">Left to do: <%= left %></h4>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src='js/main.js'></script>
+</body>
+</html>
