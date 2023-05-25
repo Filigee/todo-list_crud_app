@@ -45,14 +45,14 @@
         <% } %>
         </ul>
 
-
-
         <form action="/addTodo" method="POST" style="padding-top: 100px;">
             <input type="text" placeholder="Thing To Do" name="todoItem">
-            <button class="btn" type="submit">Add To-Do<i class="fas fa-solid fa-square-arrow-up-right right"></i></button>
+            <div class="flex-between">
+                <button class="btn" type="submit">Add To-Do<i class="fas fa-solid fa-square-arrow-up-right right"></i></button>
+                <h4 style="margin: 0; padding: 0;">Left to do: <%= left %></h4>
+            </div>
         </form>
-
-        <h4 style="float: right;">Left to do: <%= left %></h4>
+            
     </div>
     
     
