@@ -24,7 +24,7 @@
         <ul class="todoItems">
         <div class="divider margin"></div>
         <% for(let i=0; i < items.length; i++) {%>
-            <div style="display: flex; justify-content: space-between;">
+            <div class="flex-between">
                 <li class="item margin hoverable" style="padding: 10px; width: 50%;">
                     <% if(items[i].completed === true) {%>
                         <span class='completed' style="word-wrap: break-word;"><%= items[i].thing %></span>
