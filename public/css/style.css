@@ -1,6 +1,24 @@
-h1{
-    color: red;
+h1,h2,h3,h4,h5,h6{
+    color: #321E1E;
 }
+
+body{
+    background-color: #116D6E;
+}
+
+p, span {
+    color: white;
+    font-size: 18px;
+}
+
+.to-do_btn{
+    background-color: #321E1E !important;
+}
+
+.divider{
+    background-color: #4E3636;
+}
+
 .completed{
     color: gray;
     text-decoration: line-through;
