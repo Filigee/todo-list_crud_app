@@ -27,15 +27,15 @@
             <div style="display: flex; justify-content: space-between;">
                 <li class="item margin hoverable" style="padding: 10px; width: 50%;">
                     <% if(items[i].completed === true) {%>
-                        <span class='completed'><%= items[i].thing %></span>
+                        <span class='completed' style="word-wrap: break-word;"><%= items[i].thing %></span>
                     <% }else{ %>
                         <span style="word-wrap: break-word;"><%= items[i].thing %></span>
                     <% } %>
                 </li>
                 <div>
-                    <button id="high" class="importance-btn | btn grey orange" style="margin-left: 10px;">High</button>    
-                    <button id="med" class="importance-btn | btn grey orange" style="margin-left: 10px;">Med</button>    
-                    <button id="low" class="importance-btn | btn orange" style="margin-left: 10px;">Low</button> 
+                    <button id="high" class="importance-btn | btn <%= items[i].importance == 'HIGH' ? 'orange' : 'grey' %>" style="margin-left: 10px;">High</button>    
+                    <button id="med" class="importance-btn | btn <%= items[i].importance == 'MED' ? 'orange' : 'grey' %>" style="margin-left: 10px;">Med</button>    
+                    <button id="low" class="importance-btn | btn <%= items[i].importance == 'LOW' ? 'orange' : 'grey' %>" style="margin-left: 10px;">Low</button> 
                     <button class="red delete waves-effect waves-light btn " style="margin-left: 20px;">
                         <span class='fa fa-trash' style="color: black;"></span>
                     </button>
