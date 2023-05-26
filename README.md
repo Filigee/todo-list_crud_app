@@ -1,29 +1,11 @@
-Welcome to the Todo List CRUD App! This application allows you to manage your tasks by providing basic CRUD (Create, Read, Update, Delete) functionality. It is built using JavaScript, HTML, and CSS, Materialize, Express, EJS, MongoDB
+# To-Do List Crud App
+Welcome to the Todo List CRUD App! This application allows you to manage your tasks!
 
-Getting Started
+**Link to project:** https://todo-list-2-aag6.onrender.com/
 
-To get started with the Todo List CRUD App, follow these steps:
+## How It's Made:
 
-    Clone the repository: Clone the project repository to your local machine using the following command:
+**Tech used:** CSS, JavaScript, Materialize, Express, EJS, MongoDB
 
-    bash
+The to-do list project was developed using Express.js, MongoDB, EJS, and CSS. Express.js was used as the web application framework to handle routing and server-side logic. MongoDB, a NoSQL database, was chosen for data storage and retrieval of to-do tasks. EJS (Embedded JavaScript) was utilized as the templating engine to dynamically render HTML views with data from the server. CSS was employed for styling and enhancing the visual appearance of the application. Together, these technologies allowed for the creation of a dynamic and responsive to-do list application where users can add, update, and delete tasks, while data is persisted in the MongoDB database.
 
-git clone https://github.com/Filigee/todo-list_crud_app.git
-
-Navigate to the directory: Change your working directory to the cloned repository:
-
-bash
-
-    cd todo-list_crud_app
-
-    Add your MongoDB URL in the .env file
-
-Features
-
-The Todo List CRUD App provides the following features:
-
-    1. Add new tasks to your to-do list
-    2. Mark them as complete
-    3. Mark them in order of importance
-    4. Delete them from your to-do list
-    
